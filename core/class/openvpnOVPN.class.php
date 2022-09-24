@@ -29,7 +29,7 @@ class openvpnOVPN extends eqLogic {
 		$return['log'] = 'openvpnOVPN_update';
 		$return['progress_file'] = jeedom::getTmpFolder('openvpnOVPN') . '/dependance';
 		$return['state'] = 'ok';
-		if (exec('which openvpnOVPN | wc -l') == 0){
+		if (exec('which openvpn | wc -l') == 0){
 			$return['state'] = 'nok';
 		}
 		return $return;
