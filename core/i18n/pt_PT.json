@@ -1,0 +1,66 @@
+{
+    "plugins\/openvpnOVPN\/plugin_info\/configuration.php": {
+        "401 - Accès non autorisé": "401 - Acesso não autorizado"
+    },
+    "plugins\/openvpnOVPN\/desktop\/php\/openvpnOVPN.php": {
+        "401 - Accès non autorisé": "401 - Acesso não autorizado",
+        "Gestion": "Gestão",
+        "Ajouter": "Adicionar",
+        "Mes openvpnOVPNs": "Meus openvpnOVPNs",
+        "Rechercher": "Pesquisa",
+        "Configuration avancée": "Configuração avançada",
+        "Sauvegarder": "Salvar",
+        "Supprimer": "Remover",
+        "Equipement": "Equipamento",
+        "Commandes": "Comandos",
+        "Nom de l'équipement openvpnOVPN": "Nome do dispositivo openvpnOVPN",
+        "Objet parent": "Objeto pai",
+        "Aucun": "Nemhum",
+        "Catégorie": "Categoria",
+        "Activer": "Ativar",
+        "Visible": "Visivél",
+        "Certificat CA": "Certificado CA",
+        "Envoyer": "Enviar",
+        "Serveur (host1 port1,host 2 port 2....)": "Servidor (host1 porta1, host 2 porta 2 ....)",
+        "Paramètres optionnels": "Parâmetros opcionais",
+        "Commande post démarrage": "Comando pós-início",
+        "Authentification mode": "Autenticação de moda",
+        "Nom d'utilisateur": "Nome de Usuário",
+        "Password": "Senha",
+        "Certification client": "Certificação do cliente",
+        "Clef client": "Chave do cliente",
+        "Protocole": "Protocolo",
+        "Interface": "Interface",
+        "Compression": "Compressão",
+        "Script sécurité": "Script de segurança",
+        "Pull": "Camisola",
+        "Nom": "Nome",
+        "Type": "Tipo",
+        "Action": "Ação"
+    },
+    "plugins\/openvpnOVPN\/desktop\/js\/openvpnOVPN.js": {
+        "Fichier envoyé avec succès": "Arquivo enviado com sucesso",
+        "Afficher": "Display",
+        "Historiser": "Historicizar",
+        "Tester": "Teste"
+    },
+    "plugins\/openvpnOVPN\/core\/ajax\/openvpnOVPN.ajax.php": {
+        "401 - Accès non autorisé": "401 - Acesso não autorizado",
+        "EqLogic inconnu verifié l\\'id": "ID verificado do EqLogic desconhecido",
+        "Aucun fichier trouvé. Vérifiez paramètre PHP (post size limit)": "Nenhum arquivo encontrado. Verifique a configuração do PHP (limite de tamanho da postagem)",
+        "Le fichier est trop gros (maximum 1mo)": "O arquivo é muito grande (máximo de 1mo)",
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
+    },
+    "plugins\/openvpnOVPN\/core\/class\/openvpnOVPN.class.php": {
+        "Démarré": "Começado",
+        "Actif": "Ativos",
+        "Démarrer": "Começo",
+        "Arrêter": "Parar",
+        "IP": "IP",
+        "Lancement openvpnOVPN : ": "Lançamento do openvpnOVPN:",
+        "Aucune": "Não"
+    },
+    "info.json": {
+        "Plugin permettant de gérer la connexion à un serveur openvpnOVPN.": "Plugin para gerenciar a conexão com um servidor openvpnOVPN"
+    }
+}

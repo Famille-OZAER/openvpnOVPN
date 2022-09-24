@@ -1,0 +1,66 @@
+{
+    "plugins\/openvpnOVPN\/plugin_info\/configuration.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access"
+    },
+    "plugins\/openvpnOVPN\/desktop\/php\/openvpnOVPN.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Mes openvpnOVPNs": "My openvpnOVPNs",
+        "Rechercher": "Search",
+        "Configuration avancée": "Advanced configuration",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Equipment",
+        "Commandes": "Commands",
+        "Nom de l'équipement openvpnOVPN": "Name of openvpnOVPN equipment",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Catégorie": "Category",
+        "Activer": "Active",
+        "Visible": "Visible",
+        "Certificat CA": "CA certificate",
+        "Envoyer": "Send",
+        "Serveur (host1 port1,host 2 port 2....)": "Server (host1 port1, host 2 port 2 ....)",
+        "Paramètres optionnels": "Optional parameters",
+        "Commande post démarrage": "Post start command",
+        "Authentification mode": "Fashion authentication",
+        "Nom d'utilisateur": "Username",
+        "Password": "Password",
+        "Certification client": "Customer certification",
+        "Clef client": "Customer key",
+        "Protocole": "Protocol",
+        "Interface": "Interface",
+        "Compression": "Compression",
+        "Script sécurité": "Security script",
+        "Pull": "Sweater",
+        "Nom": "Name",
+        "Type": "Type",
+        "Action": "Action"
+    },
+    "plugins\/openvpnOVPN\/desktop\/js\/openvpnOVPN.js": {
+        "Fichier envoyé avec succès": "File successfully sent",
+        "Afficher": "Show",
+        "Historiser": "Historize",
+        "Tester": "Test"
+    },
+    "plugins\/openvpnOVPN\/core\/ajax\/openvpnOVPN.ajax.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "EqLogic inconnu verifié l\\'id": "Unknown EqLogic verified id",
+        "Aucun fichier trouvé. Vérifiez paramètre PHP (post size limit)": "No files found. Check PHP setting (post size limit)",
+        "Le fichier est trop gros (maximum 1mo)": "The file is too large (maximum 1mo)",
+        "Aucune méthode correspondante à : ": "No method corresponding to:"
+    },
+    "plugins\/openvpnOVPN\/core\/class\/openvpnOVPN.class.php": {
+        "Démarré": "Started",
+        "Actif": "Active",
+        "Démarrer": "Start",
+        "Arrêter": "Stop",
+        "IP": "IP",
+        "Lancement openvpnOVPN : ": "openvpnOVPN launch:",
+        "Aucune": "Any"
+    },
+    "info.json": {
+        "Plugin permettant de gérer la connexion à un serveur openvpnOVPN.": "Plugin to manage the connection to an openvpnOVPN server"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "id": "openvpnOVPN",
+    "name": "openvpnOVPN",
+    "description": {
+        "fr_FR": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN.",
+        "en_US": "Plugin to manage the connection to an openvpnOVPN server",
+        "es_ES": "Complemento para administrar la conexión a un servidor openvpnOVPN",
+        "de_DE": "Plugin zum Verwalten der Verbindung zu einem openvpnOVPN-Server",
+        "pt_PT": "Plugin para gerenciar a conexão com um servidor openvpnOVPN",
+        "ru_RU": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN",
+        "id_ID": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN",
+        "it_IT": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN",
+        "ja_JP": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN",
+        "tr": "Plugin permettant de gérer la connexion à un serveur openvpnOVPN"
+    },
+    "licence": "AGPL",
+    "author": "Jeedom SAS",
+    "require": "3.3",
+    "category": "communication",
+    "hasDependency": true,
+    "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/communication\/openvpnOVPN\/changelog",
+    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/communication\/openvpnOVPN\/",
+    "language": [
+        "fr_FR",
+        "en_US",
+        "es_ES",
+        "de_DE",
+        "ru_RU",
+        "id_ID",
+        "it_IT",
+        "ja_JP",
+        "pt_PT",
+        "tr"
+    ],
+    "compatibility": [
+        "Jeedomboard",
+        "Smart",
+        "RPI\/RPI2",
+        "Docker",
+        "DIY",
+        "v4"
+    ]
+}
