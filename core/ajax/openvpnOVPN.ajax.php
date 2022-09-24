@@ -51,6 +51,9 @@ try {
 			case 'keyClient':
 			$filepath = dirname(__FILE__) . '/../../data/key_' . $eqLogic->getConfiguration('key') . '.key';
 			break;
+			case 'ovpnFile':
+			$filepath = dirname(__FILE__) . '/../../data/ovpn_' . $eqLogic->getConfiguration('key') . '.ovpn';
+			break;
 		}
 		
 		file_put_contents($filepath, file_get_contents($_FILES['file']['tmp_name']));

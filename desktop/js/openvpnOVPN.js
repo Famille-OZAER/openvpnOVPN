@@ -62,6 +62,20 @@ function printEqLogic(_eqLogic){
       }
     }
   });
+  
+  $('#bt_uploadovpnFile').fileupload({
+    replaceFileInput: false,
+    url: 'plugins/openvpnOVPN/core/ajax/openvpnOVPN.ajax.php?action=uploadCaCrt&type=ovpnFile&id=' + _eqLogic.id+'&jeedom_token='+JEEDOM_AJAX_TOKEN,
+    dataType: 'json',
+    done: function (e, data) {
+      if (data.result.state != 'ok') {
+        $('#div_alert').showAlert({message: data.result.result, level: 'danger'});
+        return;
+      }else{
+        $('#div_alert').showAlert({message: '{{Fichier envoyé avec succès}}', level: 'success'});
+      }
+    }
+  });
   taAutosize();
 }
 

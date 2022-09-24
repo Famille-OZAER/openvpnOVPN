@@ -134,6 +134,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 										<select class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="auth_mode">
 											<option value="cert">Certificat</option>
 											<option value="password">Mot de passe</option>
+											<option value="ovpn">Fichier OVPN</option>
 										</select>
 									</div>
 								</div>
@@ -151,7 +152,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 										</div>
 									</div>
 								</div>
-								<div class="auth_mode cert">
+								<div class="auth_mode cert" style="display:none;">
 									<div class="form-group">
 										<label class="col-sm-4 control-label">{{Certification client}}</label>
 										<div class="col-sm-8">
@@ -165,6 +166,16 @@ $eqLogics = eqLogic::byType($plugin->getId());
 										<div class="col-sm-8">
 											<span class="btn btn-default btn-file">
 												<i class="fa fa-cloud-upload"></i> {{Envoyer}}<input  id="bt_uploadCaKeyClient" type="file" name="file" style="display: inline-block;">
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="auth_mode ovpn">
+									<div class="form-group">
+										<label class="col-sm-4 control-label">{{Fichier OVPN}}</label>
+										<div class="col-sm-8">
+											<span class="btn btn-default btn-file">
+												<i class="fa fa-cloud-upload"></i> {{Envoyer}}<input  id="bt_uploadCaCrtClient" type="file" name="file" style="display: inline-block;">
 											</span>
 										</div>
 									</div>
