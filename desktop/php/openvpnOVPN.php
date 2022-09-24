@@ -175,7 +175,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 										<label class="col-sm-4 control-label">{{Fichier OVPN}}</label>
 										<div class="col-sm-8">
 											<span class="btn btn-default btn-file">
-												<i class="fa fa-cloud-upload"></i> {{Envoyer}}<input  id="bt_uploadCaCrtClient" type="file" name="file" style="display: inline-block;">
+												<i class="fa fa-cloud-upload"></i> {{Envoyer}}<input  id="bt_uploadovpnFile" type="file" name="file" style="display: inline-block;">
 											</span>
 										</div>
 									</div>

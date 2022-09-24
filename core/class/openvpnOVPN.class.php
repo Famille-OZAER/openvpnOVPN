@@ -250,29 +250,29 @@ class openvpnOVPN extends eqLogic {
 	}
 	
 	public function getCmdLine() {
-		return 'openvpnOVPN --config ' . jeedom::getTmpFolder('openvpnOVPN') . '/openvpnOVPN_' . $this->getId() . '.ovpn';
+		if ($this->getConfiguration('auth_mode') == 'ovpn')
+		{
+			$ovpnFilePath=dirname(__FILE__) . '/../../data/ovpn_' . $this->getConfiguration('key') . '.ovpn';
+			return 'openvpn --config ' . $ovpnFilePath;
+		}
+		else
+		{			
+			return 'openvpn --config ' . jeedom::getTmpFolder('openvpnOVPN') . '/openvpnOVPN_' . $this->getId() . '.ovpn';
+		}
+		
 	}
 	
-	public function getCmdLineOvpn() {
-		$ovpnFilePath=dirname(__FILE__) . '/../../data/ovpn_' . $this->getConfiguration('key') . '.ovpn';
-		return 'openvpnOVPN --config ' . $ovpnFilePath;
-	}
 
 	public function start_openvpnOVPN() {
 		$this->stop_openvpnOVPN();
 		$log_name = ('openvpnOVPN_' . self::cleanVpnName($this->getName()));
 		log::remove($log_name);
-		if ($this->getConfiguration('auth_mode') == 'ovpn')
+		if ($this->getConfiguration('auth_mode') != 'ovpn')
 		{
-			$cmdLine=$this->getCmdLineOvpn();
-		}
-		else
-		{
-			$this->writeConfig();
-			$cmdLine=$this->getCmdLine();
+			$this->writeConfig();			
 		}		
-		$cmd = system::getCmdSudo() . $cmdLine . ' >> ' . log::getPathToLog($log_name) . '  2>&1 &';
-		log::add($log_name, 'info', __('Lancement openvpnOVPN : ', __FILE__) . $cmd);
+		$cmd = system::getCmdSudo() . $this->getCmdLine() . ' >> ' . log::getPathToLog($log_name) . '  2>&1 &';
+		log::add($log_name, 'info', __('Lancement openvpn : ', __FILE__) . $cmd);
 		shell_exec($cmd);
 		$this->updateState();
 		if (trim($this->getConfiguration('optionsAfterStart')) != '') {
@@ -326,7 +326,7 @@ class openvpnOVPN extends eqLogic {
 		}
 	}
 	
-	public function stop_openvpnOVPN() {
+	public function stop_openvpnOVPN() {		
 		exec("(ps ax || ps w) | grep -ie '" . $this->getCmdLine() . "' | grep -v grep | awk '{print $1}' | xargs sudo kill -9 > /dev/null 2>&1");
 		$this->updateState();
 	}

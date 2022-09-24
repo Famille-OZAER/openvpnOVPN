@@ -35,8 +35,8 @@ try {
 			throw new Exception(__('Aucun fichier trouvé. Vérifiez paramètre PHP (post size limit)', __FILE__));
 		}
 		$extension = strtolower(strrchr($_FILES['file']['name'], '.'));
-		if (!in_array($extension, array('.crt', '.key'))) {
-			throw new Exception('Extension du fichier non valide (autorisé .crt .key) : ' . $extension);
+		if (!in_array($extension, array('.crt', '.key', '.ovpn'))) {
+			throw new Exception('Extension du fichier non valide (autorisé .crt .key .ovpn) : ' . $extension);
 		}
 		if (filesize($_FILES['file']['tmp_name']) > 1000000) {
 			throw new Exception(__('Le fichier est trop gros (maximum 1mo)', __FILE__));
