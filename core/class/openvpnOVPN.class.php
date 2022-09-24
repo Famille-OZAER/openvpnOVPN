@@ -188,10 +188,10 @@ class openvpnOVPN extends eqLogic {
 			$state->setOrder(5);
 		}
 
-		$refreshIP->setType('action');
-		$refreshIP->setSubType('other');
-		$refreshIP->setEqLogic_id($this->getId());
-		$refreshIP->save();
+		$stop->setType('action');
+		$stop->setSubType('other');
+		$stop->setEqLogic_id($this->getId());
+		$stop->save();
 		
 		$refreshIP = $this->getCmd(null, 'refreshIP');
 		if (!is_object($refreshIP)) {
