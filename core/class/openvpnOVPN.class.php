@@ -103,8 +103,15 @@ class openvpnOVPN extends eqLogic {
 			return false;
 		}
 		$result = shell_exec('grep "/sbin/ip addr add dev " ' . log::getPathToLog($log_name) . ' | tail -n 1');
-		$result = trim(substr($result, strpos($result, 'local') + 5));
-		return trim(substr($result, 0, strpos($result, 'peer')));
+		if(stripos($result, 'local') !== FALSE){
+			$result = trim(substr($result, strpos($result, 'local') + 5));
+			return trim(substr($result, 0, strpos($result, 'peer')));
+		}
+		else
+		{
+			$result = trim(substr($result, strpos($result, '/sbin/ip addr add dev ') + strlen('/sbin/ip addr add dev ' + 4)));
+			return trim(substr($result, 0, strpos($result, 'broadcast')));
+		}
 	}
 	
 	public function isUp() {
@@ -180,11 +187,25 @@ class openvpnOVPN extends eqLogic {
 			$stop->setName(__('Arrêter', __FILE__));
 			$state->setOrder(5);
 		}
-		$stop->setType('action');
-		$stop->setSubType('other');
-		$stop->setEqLogic_id($this->getId());
-		$stop->save();
+
+		$refreshIP->setType('action');
+		$refreshIP->setSubType('other');
+		$refreshIP->setEqLogic_id($this->getId());
+		$refreshIP->save();
 		
+		$refreshIP = $this->getCmd(null, 'refreshIP');
+		if (!is_object($refreshIP)) {
+			$refreshIP = new openvpnOVPNCmd();
+			$refreshIP->setLogicalId('refreshIP');
+			$refreshIP->setIsVisible(1);
+			$refreshIP->setName(__('Rafraichir l\'IP', __FILE__));
+			$state->setOrder(5);
+		}
+		$refreshIP->setType('action');
+		$refreshIP->setSubType('other');
+		$refreshIP->setEqLogic_id($this->getId());
+		$refreshIP->save();
+
 		$ip = $this->getCmd(null, 'ip');
 		if (!is_object($ip)) {
 			$ip = new openvpnOVPNCmd();
@@ -391,6 +412,9 @@ public function execute($_options = array()) {
 			$eqLogic->setConfiguration('enable', 0);
 			$eqLogic->save(true);
 		}
+	}
+	if ($this->getLogicalId() == 'refreshIP') {
+		$eqLogic->getIp();
 	}
 }
 
